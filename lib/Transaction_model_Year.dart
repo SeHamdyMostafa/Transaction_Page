@@ -1,94 +1,134 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'Container_model.dart';
-import 'Dimention.dart';
+import 'device_dimenssions.dart';
 import 'Transaction_header.dart';
-import 'config/device_dimenssions.dart';
 
 class Transaction_model_Year extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-    
+      padding: EdgeInsets.only(top: 24),
       margin: EdgeInsets.symmetric(horizontal: 20),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(25),
-        color: Color.fromARGB(255, 213, 208, 208),
+        color: Color(0xFFfdfeff),
         boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey,
-                      spreadRadius: 1,
-                     blurRadius: 10,
-                    ), //BoxShadow
-                   //BoxShadow
-                  ],
+          BoxShadow(
+            color: Colors.white,
+            spreadRadius: 1,
+            blurRadius: 10,
+          ), //BoxShadow
+          //BoxShadow
+        ],
       ),
+      
+
 
       child: ListView(
-        // This next line does the trick.
         scrollDirection: Axis.horizontal,
-        padding: EdgeInsets.all(5),
-        children: <Widget>[
-          SizedBox(width: 0),
+        children:[
+          SizedBox(
+                height: 10,
+              ),
+
+           Column(
+            children: [
+              Text(
+                "100%",
+                style: TextStyle(fontSize: 20),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Text(
+                "75%",
+                style: TextStyle(fontSize: 20),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Text(
+                "50%",
+                style: TextStyle(fontSize: 20),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Text(
+                "25%",
+                style: TextStyle(fontSize: 20),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Text(
+                "0%",
+                style: TextStyle(fontSize: 20),
+              )
+            ],
+          ),
+          SizedBox(width: 10),
           Container_model(
             content: 'Jan',
-            Height: Dimention.height_year * 1.6,
+            Height: DeviceDimenssions.deviceHeight * 0.15,
           ),
-          SizedBox(width: 10),
+          SizedBox(width: 20),
           Container_model(
             content: 'Feb',
-            Height: Dimention.height_year * 1.2,
+            Height: DeviceDimenssions.deviceHeight * 0.10,
           ),
-          SizedBox(width: 10),
+          SizedBox(width: 20),
           Container_model(
             content: 'Mar',
-            Height: Dimention.height_year * 1.6,
+            Height: DeviceDimenssions.deviceHeight * 0.09,
           ),
-          SizedBox(width: 10),
+          SizedBox(width: 20),
           Container_model(
             content: 'Apr',
-            Height: Dimention.height_year * 1.7,
+            Height: DeviceDimenssions.deviceHeight * 0.14,
           ),
-          SizedBox(width: 10),
+          SizedBox(width: 20),
           Container_model(
             content: 'May',
-            Height: Dimention.height_year * 1.3,
+            Height: DeviceDimenssions.deviceHeight * 0.11,
           ),
-          SizedBox(width: 10),
+          SizedBox(width: 20),
           Container_model(
             content: 'Jun',
-            Height: Dimention.height_year * 1.8,
+            Height: DeviceDimenssions.deviceHeight * 0.09,
           ),
-          SizedBox(width: 10),
+          SizedBox(width: 20),
           Container_model(
             content: 'Jul',
-            Height: Dimention.height_year * 1.5,
+            Height: DeviceDimenssions.deviceHeight * 0.16,
           ),
-          SizedBox(width: 10),
+          SizedBox(width: 20),
           Container_model(
             content: 'Aug',
-            Height: Dimention.height_year * 1.2,
+            Height: DeviceDimenssions.deviceHeight * 0.10,
           ),
-          SizedBox(width: 10),
+          SizedBox(width: 20),
           Container_model(
             content: 'Sep',
-            Height: Dimention.height_year * 1.7,
+            Height: DeviceDimenssions.deviceHeight * 0.13,
           ),
-          SizedBox(width: 10),
+          SizedBox(width: 20),
           Container_model(
             content: 'Oct',
-            Height: Dimention.height_year * 1.3,
+            Height: DeviceDimenssions.deviceHeight * 0.09,
           ),
-          SizedBox(width: 10),
+          SizedBox(width: 20),
           Container_model(
             content: 'Nov',
-            Height: Dimention.height_year * 1.8,
+            Height: DeviceDimenssions.deviceHeight * 0.12,
           ),
-          SizedBox(width: 10),
+          SizedBox(width: 20),
           Container_model(
             content: 'Dec',
-            Height: Dimention.height_year * 1.5,
+            Height: DeviceDimenssions.deviceHeight * 0.14,
           ),
+          SizedBox(width: 10),
         ],
       ),
     );

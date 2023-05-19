@@ -1,22 +1,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Container_model.dart';
-import 'package:flutter_application_1/Dimention.dart';
+import 'package:flutter_application_1/device_dimenssions.dart';
 import 'Page_View.dart';
 import 'Transaction_header.dart';
 import 'Transaction_model_Year.dart';
 import 'Transaction_model_week.dart';
-import 'package:flutter_application_1/config/device_dimenssions.dart';
+
 class Transation_page extends StatelessWidget {
   const Transation_page({super.key});
   @override
   Widget build(BuildContext context) {
-   
     return MaterialApp(
-      home: TransactionsPage()
-    );
+        debugShowCheckedModeBanner: false, home: TransactionsPage());
   }
-
 }
 
 class TransactionsPage extends StatelessWidget {
@@ -24,25 +21,21 @@ class TransactionsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-       DeviceDimenssions.context = context;
-        DeviceDimenssions.initDeviceDimensions();
+    DeviceDimenssions.init(c: context);
     return SafeArea(
-        child: Scaffold(
-          backgroundColor: Colors.grey,
+      child: Scaffold(
+          backgroundColor: Color(0xFFE6E4ED),
           body: Container(
-            width: DeviceDimenssions.width,
-            height: DeviceDimenssions.height,
-            child: Column(children: [
-                // Row of options 
-                SizedBox(height: 20,),
-                Transaction_header(),
-                
-                // page view
-              
-            ],)
-          )
-        ),
-      );
+              width: DeviceDimenssions.deviceWidth,
+              height: DeviceDimenssions.deviceHeight,
+              child: Column(
+                children: [
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Transaction_header(),
+                ],
+              ))),
+    );
   }
 }
-
